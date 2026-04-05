@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Hub LMS Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:Poppins,sans-serif;background:#06111f;color:#e5e7eb;overflow-x:hidden}
+    .bg{position:fixed;inset:0;background:url('https://images.unsplash.com/photo-1523050854058-8df90110c9b5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;filter:brightness(.24);z-index:-2}
+    .overlay{position:fixed;inset:0;background:linear-gradient(135deg,rgba(6,17,31,.86),rgba(15,23,42,.58));z-index:-1}
+    .wrap{width:min(1220px,92%);margin:auto}
+    header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;position:sticky;top:0;background:rgba(6,17,31,.72);backdrop-filter:blur(14px);z-index:20;border-bottom:1px solid rgba(255,255,255,.08)}
+    .brand{font-weight:700;font-size:1.2rem}.brand span{color:#38bdf8}
+    .nav{display:flex;gap:16px;flex-wrap:wrap}.nav a{color:#e5e7eb;text-decoration:none;font-size:.95rem}.nav a:hover{color:#38bdf8}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;min-height:86vh;padding:40px 0}
+    h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;margin:16px 0 14px}.accent{color:#38bdf8}
+    .lead{max-width:700px;color:#cbd5e1;line-height:1.85}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(56,189,248,.14);border:1px solid rgba(56,189,248,.25);padding:8px 14px;border-radius:999px;color:#bae6fd;font-size:.9rem}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:14px;text-decoration:none;font-weight:600;border:1px solid transparent;cursor:pointer;transition:.3s}
+    .btn.primary{background:linear-gradient(135deg,#38bdf8,#2563eb);color:#fff}.btn.secondary{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.12)}
+    .btn:hover{transform:translateY(-2px)}
+    .panel{background:rgba(15,23,42,.74);border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:22px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+    .input, select{width:100%;padding:13px 14px;border:none;outline:none;border-radius:14px;background:#0f172a;color:#fff;margin-top:10px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.stat{background:rgba(255,255,255,.06);padding:14px;border-radius:18px;text-align:center}.stat b{display:block}.stat span{color:#cbd5e1;font-size:.85rem}
+    section{padding:72px 0}.title{font-size:2rem;margin:0 0 10px}.sub{max-width:760px;color:#cbd5e1;line-height:1.8;margin-bottom:28px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:rgba(15,23,42,.72);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:22px;backdrop-filter:blur(12px)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:rgba(56,189,248,.15);color:#7dd3fc;font-size:1.25rem;margin-bottom:14px}
+    .card h3{margin:0 0 8px}.card p{margin:0;color:#cbd5e1;line-height:1.7}
+    .list{display:grid;gap:14px}.row{display:flex;justify-content:space-between;gap:12px;align-items:center;background:rgba(255,255,255,.06);border-radius:16px;padding:14px 16px}
+    .tag{padding:6px 10px;border-radius:999px;background:rgba(34,197,94,.12);color:#bbf7d0;font-size:.78rem}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .table{width:100%;border-collapse:collapse;overflow:hidden;border-radius:18px}.table th,.table td{padding:12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left}.table th{color:#93c5fd}
+    footer{padding:28px 0 40px;text-align:center;color:#cbd5e1;opacity:.9}
+    @media(max-width:900px){.hero,.two{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.stats{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="bg"></div><div class="overlay"></div>
+  <header class="wrap">
+    <div class="brand">College <span>Hub LMS</span></div>
+    <nav class="nav"><a href="#home">Home</a><a href="#features">Features</a><a href="#courses">Courses</a><a href="#dashboard">Dashboard</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main class="wrap hero" id="home">
+    <div>
+      <div class="pill"><i class="fa-solid fa-graduation-cap"></i> College portal for students and admin</div>
+      <h1>Smart <span class="accent">LMS portal</span> for sign up, sign in, dashboards, course enrollment and updates</h1>
+      <p class="lead">This front-end demo is designed for a college hub with separate student and admin views. It includes sign up, sign in, sign out, course details, enrollment, and updates in one modern layout.</p>
+      <div class="actions">
+        <a class="btn primary" href="#dashboard"><i class="fa-solid fa-right-to-bracket"></i> Open Portal</a>
+        <a class="btn secondary" href="#courses"><i class="fa-solid fa-book-open"></i> View Courses</a>
+      </div>
+    </div>
+    <div class="panel">
+      <h3 style="margin:0 0 10px">Login</h3>
+      <input class="input" id="email" placeholder="Email address">
+      <input class="input" id="password" type="password" placeholder="Password">
+      <select class="input" id="role">
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+      </select>
+      <div class="actions" style="margin-top:16px">
+        <button class="btn primary" id="signin"><i class="fa-solid fa-user-check"></i> Sign In</button>
+        <button class="btn secondary" id="signup"><i class="fa-solid fa-user-plus"></i> Sign Up</button>
+        <button class="btn secondary" id="signout"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
+      </div>
+      <p id="status" style="margin:14px 0 0;color:#bbf7d0"></p>
+      <div class="stats">
+        <div class="stat"><b>12</b><span>Courses</span></div>
+        <div class="stat"><b>240</b><span>Students</span></div>
+        <div class="stat"><b>8</b><span>Updates</span></div>
+      </div>
+    </div>
+  </main>
+
+  <section class="wrap" id="features">
+    <h2 class="title">Portal Features</h2>
+    <p class="sub">Use these cards to present the main functions of your college learning management system.</p>
+    <div class="grid">
+      <div class="card"><div class="icon"><i class="fa-solid fa-user-graduate"></i></div><h3>Student Dashboard</h3><p>Shows enrolled courses, progress, notices, and pending tasks.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-user-shield"></i></div><h3>Admin Dashboard</h3><p>Manage courses, students, announcements, and enrollments.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-bell"></i></div><h3>Updates</h3><p>Display college news, exam alerts, and live announcements.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-file-signature"></i></div><h3>Enrollment</h3><p>Simple enroll button for course registration and access.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="courses">
+    <h2 class="title">Course Details</h2>
+    <p class="sub">These sample course cards can be edited to match your college curriculum.</p>
+    <div class="grid">
+      <div class="card"><div class="icon"><i class="fa-solid fa-code"></i></div><h3>Web Development</h3><p>HTML, CSS, JavaScript, and responsive design basics.</p><div class="actions"><button class="btn secondary enroll" data-course="Web Development">Enroll</button></div></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-database"></i></div><h3>Database Systems</h3><p>SQL, tables, queries, and simple data management.</p><div class="actions"><button class="btn secondary enroll" data-course="Database Systems">Enroll</button></div></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Cyber Security</h3><p>Basic safety, authentication, and portal security tips.</p><div class="actions"><button class="btn secondary enroll" data-course="Cyber Security">Enroll</button></div></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="dashboard">
+    <h2 class="title">Student and Admin Dashboard</h2>
+    <div class="two">
+      <div class="card">
+        <h3>Student Dashboard</h3>
+        <div class="list">
+          <div class="row"><div><b>Enrolled Courses</b><span>3 active courses</span></div><span class="tag">Open</span></div>
+          <div class="row"><div><b>Assignments</b><span>2 pending tasks</span></div><span class="tag">Due</span></div>
+          <div class="row"><div><b>Updates</b><span>New exam schedule released</span></div><span class="tag">New</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Admin Dashboard</h3>
+        <div class="list">
+          <div class="row"><div><b>Manage Courses</b><span>Add or edit course details</span></div><span class="tag">Admin</span></div>
+          <div class="row"><div><b>Manage Students</b><span>View enrollments and status</span></div><span class="tag">Admin</span></div>
+          <div class="row"><div><b>Post Updates</b><span>Send notices to students</span></div><span class="tag">Admin</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <h2 class="title">Sign Out and Social</h2>
+    <p class="sub">The sign out button clears session text in this demo. You can also add college social links here.</p>
+    <div class="actions">
+      <a class="btn secondary" href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a class="btn secondary" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a class="btn secondary" href="#"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+      <a class="btn secondary" href="#"><i class="fa-brands fa-github"></i> GitHub</a>
+    </div>
+  </section>
+
+  <footer>© 2026 College Hub LMS Portal</footer>
+
+  <script>
+    const status = document.getElementById('status');
+    document.getElementById('signup').onclick = () => status.textContent = 'Sign up completed successfully (demo).';
+    document.getElementById('signin').onclick = () => {
+      const email = document.getElementById('email').value.trim();
+      const role = document.getElementById('role').value;
+      if(!email) { status.textContent = 'Enter your email address.'; return; }
+      status.textContent = 'Signed in as ' + role + ' : ' + email;
+    };
+    document.getElementById('signout').onclick = () => status.textContent = 'Signed out successfully.';
+    document.querySelectorAll('.enroll').forEach(btn => btn.onclick = () => status.textContent = 'Enrolled in ' + btn.dataset.course + ' successfully.' );
+  </script>
+</body>
+</html>

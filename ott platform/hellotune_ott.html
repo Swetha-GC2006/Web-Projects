@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Tune OTT Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:Poppins,sans-serif;background:#050816;color:#fff;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;filter:brightness(.28);z-index:-2}
+    body::after{content:'';position:fixed;inset:0;background:linear-gradient(135deg,rgba(5,8,22,.88),rgba(7,14,30,.55));z-index:-1}
+    .wrap{width:min(1180px,92%);margin:auto}
+    header{padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;position:sticky;top:0;background:rgba(5,8,22,.7);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);z-index:20}
+    .brand{font-weight:700;font-size:1.2rem}.brand span{color:#38bdf8}
+    .nav a{color:#e2e8f0;text-decoration:none;margin-left:18px;font-size:.95rem}.nav a:hover{color:#38bdf8}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;min-height:86vh;padding:40px 0}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(56,189,248,.14);border:1px solid rgba(56,189,248,.25);color:#bae6fd;font-size:.9rem}
+    h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;margin:18px 0 14px}.highlight{color:#38bdf8}
+    p{color:#cbd5e1;line-height:1.8}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:14px;text-decoration:none;font-weight:600;transition:.3s}
+    .btn.primary{background:linear-gradient(135deg,#38bdf8,#2563eb);color:#fff}.btn.secondary{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.12)}
+    .btn:hover{transform:translateY(-2px)}
+    .panel{background:rgba(15,23,42,.68);border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:24px;box-shadow:0 18px 40px rgba(0,0,0,.24)}
+    .profile{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    .avatar{width:92px;height:92px;border-radius:20px;object-fit:cover;border:3px solid rgba(255,255,255,.16)}
+    .meta b{display:block;font-size:1.2rem}.meta span{color:#cbd5e1}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .stat{background:rgba(255,255,255,.06);padding:14px;border-radius:18px;text-align:center}.stat b{display:block}.stat span{color:#cbd5e1;font-size:.85rem}
+    section{padding:72px 0}.title{font-size:2rem;margin:0 0 10px}.sub{max-width:760px;color:#cbd5e1;line-height:1.8;margin-bottom:28px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:rgba(15,23,42,.72);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:22px;backdrop-filter:blur(12px)}
+    .icon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:rgba(56,189,248,.15);color:#7dd3fc;font-size:1.25rem;margin-bottom:14px}
+    .card h3{margin:0 0 8px}.card p{margin:0;color:#cbd5e1}
+    .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.tag{font-size:.78rem;padding:6px 10px;border-radius:999px;background:rgba(34,197,94,.12);color:#bbf7d0}
+    .social{display:flex;gap:12px;flex-wrap:wrap}.social a{width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.1)}
+    footer{padding:28px 0 40px;text-align:center;color:#cbd5e1;opacity:.9}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:560px){.grid{grid-template-columns:1fr}.nav a{margin-left:12px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">Hello<span>Tune</span> OTT</div>
+    <nav class="nav"><a href="#home">Home</a><a href="#features">Features</a><a href="#plans">Plans</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main class="wrap hero" id="home">
+    <div>
+      <div class="pill"><i class="fa-solid fa-music"></i> Set caller tune by mobile number</div>
+      <h1>One platform for <span class="highlight">Hello Tune</span> and OTT entertainment</h1>
+      <p>This sample website is made using HTML, CSS, and JavaScript. It lets users enter a mobile number, verify OTP, set a Hello Tune, and also shows OTT-style entertainment cards.</p>
+      <div class="actions">
+        <a class="btn primary" href="#plans"><i class="fa-solid fa-play"></i> Start Now</a>
+        <a class="btn secondary" href="#features"><i class="fa-solid fa-circle-info"></i> Learn More</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="profile">
+        <img class="avatar" src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=400&q=80" alt="Music app preview">
+        <div class="meta"><b>Mobile Login</b><span>OTP based hello tune activation</span></div>
+      </div>
+      <label>Mobile Number</label>
+      <input id="mobile" type="tel" placeholder="Enter 10 digit number" style="width:100%;margin:8px 0 14px;padding:14px 16px;border-radius:14px;border:none;outline:none;background:#0f172a;color:#fff;font-size:1rem">
+      <button class="btn primary" id="sendOtp" style="width:100%;justify-content:center;border:none;cursor:pointer"><i class="fa-solid fa-paper-plane"></i> Send OTP</button>
+      <div id="otpBox" style="display:none;margin-top:14px">
+        <label>Enter OTP</label>
+        <input id="otp" type="text" placeholder="123456" style="width:100%;margin:8px 0 14px;padding:14px 16px;border-radius:14px;border:none;outline:none;background:#0f172a;color:#fff;font-size:1rem">
+        <button class="btn secondary" id="verifyOtp" style="width:100%;justify-content:center;border:none;cursor:pointer"><i class="fa-solid fa-shield-halved"></i> Verify & Activate</button>
+      </div>
+      <p id="status" style="margin:14px 0 0;color:#bbf7d0"></p>
+    </div>
+  </main>
+
+  <section class="wrap" id="features">
+    <h2 class="title">Dashboard Features</h2>
+    <p class="sub">These cards show how you can present Hello Tune options and OTT content in a clean dashboard layout.</p>
+    <div class="cards">
+      <div class="card"><div class="icon"><i class="fa-solid fa-phone"></i></div><h3>Mobile Login</h3><p>Enter number and verify with OTP before activation.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-music"></i></div><h3>Hello Tune</h3><p>Choose a song and set it as caller tune.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-tv"></i></div><h3>OTT Library</h3><p>Show movies, series, and live content cards.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-bell"></i></div><h3>Notifications</h3><p>Send activation and renewal alerts.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="plans">
+    <h2 class="title">Sample OTT Plans</h2>
+    <p class="sub">Use this as a front-end demo. Replace plan prices and services with your own data later.</p>
+    <div class="cards">
+      <div class="card"><div class="icon"><i class="fa-solid fa-film"></i></div><h3>Basic Pack</h3><p>Caller tune + limited OTT access.</p><div class="tags"><span class="tag">₹199</span><span class="tag">30 Days</span></div></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-clapperboard"></i></div><h3>Plus Pack</h3><p>Hello Tune + premium movies and web series.</p><div class="tags"><span class="tag">₹299</span><span class="tag">60 Days</span></div></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-crown"></i></div><h3>Premium Pack</h3><p>Unlimited tunes and full OTT dashboard.</p><div class="tags"><span class="tag">₹499</span><span class="tag">90 Days</span></div></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <h2 class="title">Social Links</h2>
+    <p class="sub">You can connect this demo to real social accounts using icon buttons.</p>
+    <div class="social">
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <footer>© 2026 HelloTune OTT Platform</footer>
+
+  <script>
+    const sendOtp = document.getElementById('sendOtp');
+    const verifyOtp = document.getElementById('verifyOtp');
+    const otpBox = document.getElementById('otpBox');
+    const status = document.getElementById('status');
+    sendOtp.onclick = () => {
+      const mobile = document.getElementById('mobile').value.trim();
+      if(!/^\d{10}$/.test(mobile)) { status.textContent = 'Enter a valid 10 digit mobile number.'; return; }
+      otpBox.style.display = 'block';
+      status.textContent = 'OTP sent to ' + mobile + ' (demo mode).';
+    };
+    verifyOtp.onclick = () => {
+      const otp = document.getElementById('otp').value.trim();
+      status.textContent = otp === '123456' ? 'Hello Tune activated successfully!' : 'Invalid OTP. Try 123456 in this demo.';
+    };
+  </script>
+</body>
+</html>

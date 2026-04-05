@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swetha Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root{--bg:#0f172a;--card:rgba(15,23,42,.74);--text:#f8fafc;--muted:#cbd5e1;--accent:#38bdf8;--accent2:#22c55e;}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Poppins,sans-serif;color:var(--text);background:#020617;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;filter:brightness(.35);z-index:-2}
+    body::after{content:'';position:fixed;inset:0;background:linear-gradient(135deg,rgba(2,6,23,.82),rgba(15,23,42,.52));z-index:-1}
+    .container{width:min(1150px,92%);margin:auto}
+    nav{position:sticky;top:0;backdrop-filter:blur(14px);background:rgba(2,6,23,.55);border-bottom:1px solid rgba(255,255,255,.08);z-index:20}
+    .navwrap{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:12px;flex-wrap:wrap}
+    .logo{font-weight:700;font-size:1.15rem}.logo span{color:var(--accent)}
+    .links{display:flex;gap:18px;flex-wrap:wrap}.links a{color:var(--text);text-decoration:none;font-size:.95rem;opacity:.9}.links a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;min-height:calc(100vh - 72px);padding:40px 0}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.3);border-radius:999px;color:#bae6fd;font-size:.9rem}
+    h1{font-size:clamp(2.4rem,6vw,4.5rem);line-height:1.06;margin:18px 0 14px}.name{color:#fff}.highlight{color:var(--accent)}
+    .lead{max-width:650px;color:var(--muted);line-height:1.8;margin-bottom:26px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600;border:1px solid transparent;transition:.3s}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),#2563eb);color:#fff}.btn.secondary{background:rgba(255,255,255,.06);color:var(--text);border-color:rgba(255,255,255,.12)}
+    .btn:hover{transform:translateY(-2px)}
+    .profile-card{background:var(--card);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.28)}
+    .avatar{width:180px;height:180px;border-radius:50%;object-fit:cover;border:5px solid rgba(255,255,255,.18);display:block;margin:0 auto 18px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.stat{background:rgba(255,255,255,.06);border-radius:18px;padding:14px;text-align:center}
+    .stat b{display:block;font-size:1.2rem}.stat span{font-size:.82rem;color:var(--muted)}
+    section{padding:72px 0}.section-title{font-size:2rem;margin:0 0 18px}.section-sub{color:var(--muted);max-width:760px;line-height:1.8;margin-bottom:28px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:rgba(15,23,42,.72);border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:22px;backdrop-filter:blur(12px)}
+    .icon{width:54px;height:54px;border-radius:16px;background:rgba(56,189,248,.15);display:grid;place-items:center;color:#7dd3fc;font-size:1.3rem;margin-bottom:14px}
+    .card h3{margin:0 0 8px}.card p{color:var(--muted);line-height:1.7}
+    .project-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.tag{font-size:.8rem;padding:6px 10px;border-radius:999px;background:rgba(34,197,94,.12);color:#bbf7d0}
+    .timeline{display:grid;gap:16px}.timeline .card{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}.year{white-space:nowrap;color:#93c5fd;font-weight:600}
+    .social{display:flex;gap:14px;flex-wrap:wrap}.social a{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.08);color:#fff;text-decoration:none;font-size:1.1rem;border:1px solid rgba(255,255,255,.1)}
+    footer{padding:26px 0 40px;color:#cbd5e1;text-align:center;opacity:.9}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.timeline .card{flex-direction:column}}
+    @media (max-width:520px){.stats{grid-template-columns:1fr}.avatar{width:150px;height:150px}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container navwrap">
+      <div class="logo">Swetha<span>.</span></div>
+      <div class="links">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container hero" id="home">
+    <div>
+      <div class="badge"><i class="fa-solid fa-star"></i> Portfolio Dashboard</div>
+      <h1>Hello, I’m <span class="name">G CHOWDAPPA GARI SWETHA</span><br><span class="highlight">BSc Computer Science Student</span></h1>
+      <p class="lead">A modern personal portfolio with profile details, a dashboard style layout, project icons, a resume download button, and social links.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects"><i class="fa-solid fa-diagram-project"></i> View Projects</a>
+        <a class="btn secondary" href="resume.pdf" download><i class="fa-solid fa-download"></i> Download Resume</a>
+      </div>
+    </div>
+    <div class="profile-card">
+      <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Profile picture" />
+      <h2 style="text-align:center;margin:0 0 6px">Swetha</h2>
+      <p style="text-align:center;color:var(--muted);margin:0">BSc Computer Science | Madakasira</p>
+      <div class="stats">
+        <div class="stat"><b>SSC</b><span>2021</span></div>
+        <div class="stat"><b>Inter</b><span>2023</span></div>
+        <div class="stat"><b>Skills</b><span>MS Office</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="container" id="about">
+    <h2 class="section-title">Dashboard</h2>
+    <p class="section-sub">This section shows your profile, education, skills, and location in clean cards so the page feels organized and professional.</p>
+    <div class="grid">
+      <div class="card"><div class="icon"><i class="fa-solid fa-user"></i></div><h3>Profile</h3><p>Female, Indian, Hindu, Telugu-English-Kannada speaker.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-graduation-cap"></i></div><h3>Education</h3><p>SSC, Intermediate MPC, and BSc Computer Science currently studying.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-computer"></i></div><h3>Skills</h3><p>MS Office, computer basics knowledge, keyboard skills, and MS Do'S.</p></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-location-dot"></i></div><h3>Location</h3><p>Kothulagutta, Madakasira, Sri Sathya Sai District, Andhra Pradesh.</p></div>
+    </div>
+  </section>
+
+  <section class="container" id="projects">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">You can replace these sample projects with your real work, assignments, or mini projects later.</p>
+    <div class="grid">
+      <div class="card"><div class="icon"><i class="fa-solid fa-globe"></i></div><h3>Portfolio Website</h3><p>A responsive personal website with a hero section, dashboard, and contact links.</p><div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-book-open"></i></div><h3>Student Profile Page</h3><p>A simple profile page that displays education, skills, and personal details neatly.</p><div class="project-tags"><span class="tag">UI Design</span><span class="tag">Layout</span></div></div>
+      <div class="card"><div class="icon"><i class="fa-solid fa-mobile-screen"></i></div><h3>Mobile UI Mockup</h3><p>A clean mobile interface concept designed for easy reading and modern styling.</p><div class="project-tags"><span class="tag">Responsive</span><span class="tag">Icons</span></div></div>
+    </div>
+  </section>
+
+  <section class="container" id="resume">
+    <h2 class="section-title">Resume</h2>
+    <div class="card timeline">
+      <div><strong>Resume file</strong><p style="margin:8px 0 0;color:var(--muted)">Place your PDF as <code>resume.pdf</code> in the same folder as this HTML file.</p></div>
+      <a class="btn primary" href="resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a>
+    </div>
+  </section>
+
+  <section class="container" id="contact">
+    <h2 class="section-title">Social Links</h2>
+    <p class="section-sub">Replace these with your real profiles. The icons are ready for WhatsApp, Instagram, LinkedIn, GitHub, and email.</p>
+    <div class="social">
+      <a href="https://wa.me/917032977405" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:charanchiru998@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+  </section>
+
+  <footer>© 2026 Swetha Portfolio</footer>
+
+  <script>
+    document.querySelectorAll('.links a, .btn[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.startsWith('#')){e.preventDefault();document.querySelector(id).scrollIntoView({behavior:'smooth'});}}));
+  </script>
+</body>
+</html>
